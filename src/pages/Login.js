@@ -60,56 +60,44 @@ function Login({ setIsAuth }) {
   
 
   return (
-    <div className="loginPage">
-      <div>
+    <div>
         <h3> Register User </h3>
-        <input
-          placeholder="Email..."
-          onChange={(event) => {
-            setRegisterEmail(event.target.value);
-          }}
-        />
-        <input
-          placeholder="Password..."
-          onChange={(event) => {
-            setRegisterPassword(event.target.value);
-          }}
-        />
 
-        <button onClick={register}> Create User</button>
-      </div>
+        <div className="form-group">
+          <label>Email address</label>
+          <input
+          placeholder="Email..." className="form-control" onChange={(event) => {
+            setRegisterEmail(event.target.value);}}
+          />
+          <label> Password </label>
+          <input
+          placeholder="Password..." className="form-control" onChange={(event) => {
+            setRegisterPassword(event.target.value);}}
+          />
+          <button type="submit" className="btn btn-darkk btn-lg btn-block"onClick={register}> Register </button>
+        </div>
+        <br/>
+
+        <h3> Login </h3>
+        <div className="form-group">
+          <label>Email address</label>
+          <input
+          placeholder="Email..." className="form-control" onChange={(event) => {
+            setRegisterEmail(event.target.value);}}
+          />
+          <label> Password </label>
+          <input
+          placeholder="Password..." className="form-control" onChange={(event) => {
+            setRegisterPassword(event.target.value);}}
+          />
+          <button type="submit" className="btn btn-darkk btn-lg btn-block" onClick={login}> Login </button>
+        </div>
+        <br/>
 
       <div>
-        <h3> Login </h3>
-        <input
-          placeholder="Email..."
-          onChange={(event) => {
-            setLoginEmail(event.target.value);
-          }}
-        />
-        <input
-          placeholder="Password..."
-          onChange={(event) => {
-            setLoginPassword(event.target.value);
-          }}
-        />
-
-        <button onClick={login}> Login</button>
+          <button type="submit" className="btn btn-darkk btn-lg btn-block" onClick={signInWithGoogle}> Sign in with Google</button>
       </div>
-
-      <h4> User Logged In: </h4>
-      {user?.email}
-
-
-      <p>Sign In With Google to Continue</p>
-      <button className="login-with-google-btn" onClick={signInWithGoogle}>
-        Sign in with Google
-      </button>
-
-
    </div>
-
-
   );
 }
 

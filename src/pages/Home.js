@@ -14,11 +14,12 @@ function Home({ isAuth }) {
     };
 
     getPosts();
-  });
+  },[]);
 
   const deletePost = async (id) => {
     const postDoc = doc(db, "post", id);
     await deleteDoc(postDoc);
+    window.location.reload();
   };
 
    return (
