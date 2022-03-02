@@ -28,6 +28,7 @@ body, html, .App, #root, .outer {
   justify-content: center;
   flex-direction: column;
   text-align: left;
+  height: auto;
 }
 
 .inner {

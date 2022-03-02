@@ -43,7 +43,7 @@ function App() {
           </div>
         </div>
       </nav>
-      <div className="outter">
+      <div className="outer">
         <div className="inner">
           <Routes>
             <Route path="/" element={<Home isAuth={isAuth} />} />
